@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup>
+        <TargetFramework>netstandard2.1</TargetFramework>
+        <LangVersion>latest</LangVersion>
+
+        <Version>0.1.0</Version>
+        <Description>Example mod using Reactor</Description>
+        <Authors>NuclearPowered</Authors>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\Reactor\Reactor.csproj" />
+    </ItemGroup>
+    <ItemGroup>
+        <Reference Include="Reactor.OxygenFilter.MSBuild, Version=0.2.10.0, Culture=neutral, PublicKeyToken=null" Condition="'$(TargetFramework)' == 'net471'">
+            <HintPath>..\..\Reactor.OxygenFilter\Reactor.OxygenFilter.MSBuild\bin\Debug\net472\Reactor.OxygenFilter.MSBuild.dll</HintPath>
+        </Reference>
+    </ItemGroup>
+
+    <Import Project="../AmongUs.props" />
+</Project>

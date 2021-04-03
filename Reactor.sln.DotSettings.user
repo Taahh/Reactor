@@ -1,0 +1,29 @@
+﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+	<s:Boolean x:Key="/Default/AddReferences/RecentPaths/=E_003A_005CA_0020Folder_0020for_0020More_0020Folders_005CBepInEx_005Fx64_005F5_002E4_002E9_002E0_005CBepInEx_005Ccore_005C0Harmony_002Edll/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/AddReferences/RecentPaths/=E_003A_005CA_0020Folder_0020for_0020More_0020Folders_005CBepInEx_005Fx64_005F5_002E4_002E9_002E0_005CBepInEx_005Ccore_005CBepInEx_002EHarmony_002Edll/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/AddReferences/RecentPaths/=E_003A_005CA_0020Folder_0020for_0020More_0020Folders_005CHazel_002Edll/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/AddReferences/RecentPaths/=E_003A_005CRiderProjects_005CReactor_002EOxygenFilter_005CReactor_002EOxygenFilter_002EMSBuild_005Cbin_005CDebug_005Cnet472_005CReactor_002EOxygenFilter_002EMSBuild_002Edll/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/AddReferences/RecentPaths/=E_003A_005CRiderProjects_005CReactor_002EOxygenFilter_005CReactor_002EOxygenFilter_002EMSBuild_005Cbin_005CDebug_005Cnetstandard2_002E1_005CReactor_002EOxygenFilter_002Edll/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/AddReferences/RecentPaths/=E_003A_005CRiderProjects_005CReactor_002EOxygenFilter_005CReactor_002EOxygenFilter_002EMSBuild_005Cbin_005CDebug_005Cnetstandard2_002E1_005CReactor_002EOxygenFilter_002EMSBuild_002Edll/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/AddReferences/RecentPaths/=E_003A_005CSteamLibrary_005Csteamapps_005Ccommon_005CAmong_0020Us_005CBepInEx_005Ccore_005CBepInEx_002ECore_002Edll/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/AddReferences/RecentPaths/=E_003A_005CSteamLibrary_005Csteamapps_005Ccommon_005CAmong_0020Us_005CBepInEx_005Ccore_005CBepInEx_002EIL2CPP_002Edll/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/AddReferences/RecentPaths/=E_003A_005CSteamLibrary_005Csteamapps_005Ccommon_005CAmong_0020Us_005CBepInEx_005Cunhollowed_005CUnityEngine_002EAssetBundleModule_002Edll/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/AddReferences/RecentPaths/=E_003A_005CSteamLibrary_005Csteamapps_005Ccommon_005CAmong_0020Us_005CBepInEx_005Cunhollowed_005CUnityEngine_002ECoreModule_002Edll/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/AddReferences/RecentPaths/=E_003A_005CSteamLibrary_005Csteamapps_005Ccommon_005CAmong_0020Us_005CBepInEx_005Cunhollowed_005CUnityEngine_002Edll/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/AddReferences/RecentPaths/=E_003A_005CSteamLibrary_005Csteamapps_005Ccommon_005CAmong_0020Us_005CBepInEx_005Cunhollowed_005CUnityEngine_002EImageConversionModule_002Edll/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/AddReferences/RecentPaths/=E_003A_005CSteamLibrary_005Csteamapps_005Ccommon_005CAmong_0020Us_005CBepInEx_005Cunhollowed_005CUnityEngine_002EUI_002Edll/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/AddReferences/RecentPaths/=E_003A_005CSteamLibrary_005Csteamapps_005Ccommon_005CAmong_0020Us_005CBepInEx_005Cunity_002Dlibs_005CUnityEngine_002ECoreModule_002Edll/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/AddReferences/RecentPaths/=E_003A_005CSteamLibrary_005Csteamapps_005Ccommon_005CAmong_0020Us_005CBepInEx_005Cunity_002Dlibs_005CUnityEngine_002Edll/@EntryIndexedValue">True</s:Boolean>
+	<s:String x:Key="/Default/Environment/AssemblyExplorer/XmlDocument/@EntryValue">&lt;AssemblyExplorer&gt;&#xD;
+  &lt;PhysicalFolder Path="C:\Users\moh_a\.nuget\packages\reactor.oxygenfilter.msbuild\0.2.10" Loaded="True" /&gt;&#xD;
+  &lt;PhysicalFolder Path="C:\Users\moh_a\.nuget\packages\reactor.oxygenfilter.msbuild\0.2.3" Loaded="True" /&gt;&#xD;
+  &lt;PhysicalFolder Path="C:\Users\moh_a\.nuget\packages\reactor.oxygenfilter.msbuild\0.2.4" Loaded="True" /&gt;&#xD;
+  &lt;PhysicalFolder Path="C:\Users\moh_a\.nuget\packages\reactor.oxygenfilter.msbuild\0.2.5" Loaded="True" /&gt;&#xD;
+  &lt;PhysicalFolder Path="C:\Users\moh_a\.nuget\packages\reactor.oxygenfilter.msbuild\0.2.9" Loaded="True" /&gt;&#xD;
+&lt;/AssemblyExplorer&gt;</s:String>
+	<s:Int64 x:Key="/Default/Environment/Hierarchy/Build/BuildTool/MsbuildVersion/@EntryValue">1048576</s:Int64>
+	<s:String x:Key="/Default/Environment/Hierarchy/Build/BuildTool/CustomBuildToolPath/@EntryValue">C:\Program Files\dotnet\sdk\5.0.201\MSBuild.dll</s:String>
+	
+	
+	
+	</wpf:ResourceDictionary>

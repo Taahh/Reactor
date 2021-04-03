@@ -1,0 +1,87 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <IsNetCoreApp Condition="$(MSBuildRuntimeType) == 'Core'">true</IsNetCoreApp>
+        <IsNetCoreApp Condition="$(IsNetCoreApp) == ''">false</IsNetCoreApp>
+        <TaskFolder Condition="$(IsNetCoreApp)">netstandard2.1</TaskFolder>
+        <TaskFolder Condition="!$(IsNetCoreApp)">net472</TaskFolder>
+        <TaskAssembly>E:\RiderProjects\Reactor.OxygenFilter\Reactor.OxygenFilter.MSBuild\bin\Debug\netstandard2.1\Reactor.OxygenFilter.MSBuild.dll</TaskAssembly>
+    </PropertyGroup>
+
+    <PropertyGroup Condition="$(GamePlatform) == ''">
+        <GamePlatform>Steam</GamePlatform>
+    </PropertyGroup>
+
+    <UsingTask TaskName="LoadMappings" AssemblyFile="$(TaskAssembly)" />
+    <UsingTask TaskName="GenerateReferences" AssemblyFile="$(TaskAssembly)" />
+    <UsingTask TaskName="Reobfuscate" AssemblyFile="$(TaskAssembly)" />
+    <UsingTask TaskName="Deobfuscate" AssemblyFile="$(TaskAssembly)" />
+
+    <Target Name="Validation">
+        <Error Condition=" !Exists('$(AmongUs)') " Text="Couldn't find game path, make sure to set AmongUs environment variable" />
+
+        <Error Condition=" '$(GameVersion)' == '' " Text="Game version is not set (make sure to set GamePlatform environment variable if you are using reactor template)" />
+    </Target>
+
+    <Target Name="WarnAboutTargetFramework" BeforeTargets="PrepareForBuild" Condition=" '$(TargetFramework)' != 'netstandard2.1' ">
+        <!-- TODO link to docs explaining why netstandard is better -->
+        <Warning Text="Your project is not targetting netstandard2.1, you probably want to change that." File="$(MSBuildProjectFullPath)" />
+    </Target>
+
+    <Target Name="LoadMappings">
+        <LoadMappings GameVersion="$(GameVersion)" Mappings="$(Mappings)" />
+    </Target>
+
+    <Target Name="GenerateReferences" BeforeTargets="PrepareForBuild" DependsOnTargets="LoadMappings">
+        <GenerateReferences AmongUs="$(AmongUs)">
+            <Output TaskParameter="ReferencesPath" PropertyName="ReferencesPath" />
+        </GenerateReferences>
+
+        <ItemGroup>
+            <Reference Include="$(ReferencesPath)\*.dll">
+                <Private>false</Private>
+            </Reference>
+
+            <Reference Include="$(AmongUs)\BepInEx\unhollowed\*.dll">
+                <Private>false</Private>
+            </Reference>
+            <Reference Remove="$(AmongUs)\BepInEx\unhollowed\netstandard.dll;$(AmongUs)\BepInEx\unhollowed\Assembly-CSharp.dll" />
+            <Reference Include="$(AmongUs)\BepInEx\core\*.dll">
+                <Private>false</Private>
+            </Reference>
+        </ItemGroup>
+    </Target>
+
+    <Target Name="Deobfuscate" AfterTargets="GenerateReferences">
+        <Deobfuscate AmongUs="$(AmongUs)" Input="@(Deobfuscate)">
+            <Output TaskParameter="Deobfuscated" PropertyName="Deobfuscated" />
+        </Deobfuscate>
+
+        <ItemGroup>
+            <Reference Include="$(Deobfuscated)" />
+        </ItemGroup>
+    </Target>
+
+    <Target Name="Reobfuscate" AfterTargets="Build">
+        <Reobfuscate AmongUs="$(AmongUs)" Input="$(ProjectDir)$(OutputPath)$(AssemblyName).dll" ReferencedAssemblies="@(ReferencePath)" />
+    </Target>
+    
+    <PropertyGroup>
+        <TargetFramework>netstandard2.1</TargetFramework>
+        <LangVersion>latest</LangVersion>
+
+        <Version>0.1.0</Version>
+        <Description>Debugging mod for Reactor</Description>
+        <Authors>NuclearPowered</Authors>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\Reactor\Reactor.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="System.IO" Version="4.3.0" />
+    </ItemGroup>
+
+    <Import Project="../AmongUs.props" />
+</Project>

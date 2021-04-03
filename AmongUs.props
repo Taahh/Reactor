@@ -1,0 +1,23 @@
+<Project>
+    <PropertyGroup Condition="'$(GamePlatform)' == 'Steam'">
+        <GameVersion>2021.3.31s</GameVersion>
+        <DefineConstants>$(DefineConstants);STEAM</DefineConstants>
+    </PropertyGroup>
+
+    <PropertyGroup Condition="'$(GamePlatform)' == 'Itch'">
+        <GameVersion>2021.3.31i</GameVersion>
+        <DefineConstants>$(DefineConstants);ITCH</DefineConstants>
+    </PropertyGroup>
+
+    <PropertyGroup>
+        <Mappings>E:\RiderProjects\Reactor\2021.3.31s.json</Mappings>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Reactor.OxygenFilter.MSBuild" Version="0.2.10" />
+    </ItemGroup>
+
+    <Target Name="Copy" AfterTargets="Reobfuscate">
+        <Copy SourceFiles="$(OutputPath)reobfuscated/$(AssemblyName)-$(GameVersion).dll" DestinationFolder="$(AmongUs)/BepInEx/plugins/" Condition="'$(Configuration)' == 'Debug'" />
+    </Target>
+</Project>
